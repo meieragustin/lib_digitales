@@ -25,3 +25,18 @@ int cantidad_pasos_pan(int grados_pan) {
   return total_pasos_pan;
 
 }
+
+int cantidad_pasos_long(int dist_long) {
+
+  float diam_polea = 1.4;
+  float grados_por_pasos = 1.8;
+
+  float recorrido_por_vuelta = 3.14 * diam_polea;
+
+  float total_vueltas = dist_long / recorrido_por_vuelta;
+
+  int total_pasos_long = total_vueltas * (360 / grados_por_pasos);
+
+  return total_pasos_long;
+
+}
